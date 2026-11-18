@@ -1,9 +1,9 @@
 """
-Ayelenómetro: identification of the positions that modulate a quantitative phenotype from a
+seqbased_predictions: identification of the positions that modulate a quantitative phenotype from a
 multiple sequence alignment, and phenotype prediction.
 
 Usage:
-    from ayelenometro import Case, run_case
+    from seqbased_predictions import Case, run_case
     case = Case(fasta="HIV_FPV.fasta", name="HIV_FPV", phenotype="FPV-IP (%)", phenotype_index=-1,
                 create_alphabet=True)
     summary = run_case(case)

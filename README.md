@@ -6,14 +6,14 @@ pip install -r requirements.txt
 
 ## Usage
 
-Open `ayelenometro.ipynb`, fill in the configuration cell and run the run cell.
+Open `seqbased_predictions.ipynb`, fill in the configuration cell and run the run cell.
 The included example (`HIV_FPV.fasta`: HIV-1 protease variants with their percent inhibition by
 fosamprenavir, FPV) runs from that notebook.
 
 It can also be used from Python:
 
 ```python
-from ayelenometro import Case, run_case
+from seqbased_predictions import Case, run_case
 case = Case(fasta="HIV_FPV.fasta", name="HIV_FPV", phenotype="FPV-IP (%)",
             phenotype_index=-1, create_alphabet=True)
 summary = run_case(case)
@@ -41,7 +41,7 @@ summary = run_case(case)
 | `n_controls` | `100` | random position sets per variant |
 | `n_permutations` | `0` | controls with permuted phenotypes (they repeat the selection; costly) |
 | `alphabet_iterations`, `alphabet_alpha` | `1000`, `0.1` | alphabet Monte Carlo |
-| `mcmc` | `{}` | options of the selection Monte Carlo (see `ayelenometro.mcmc.mcmc`) |
+| `mcmc` | `{}` | options of the selection Monte Carlo (see `seqbased_predictions.mcmc.mcmc`) |
 | `results_dir` | `results` | output folder |
 
 ## Variants
